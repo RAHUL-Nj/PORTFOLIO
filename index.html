@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rahul Kumar — cybersecurity project hub, security research, practical projects and hands-on learning.">
+  <title>Rahul Kumar | Cybersecurity Project Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-grid"></div>
+
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a class="brand" href="#home" aria-label="Rahul Kumar home">
+        <span class="brand-mark">&gt;_</span>
+        <span>RAHUL<span class="accent">.SEC</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#competitions">Competitions</a>
+        <a href="#learning">Learning</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> CYBERSECURITY PROJECT HUB</div>
+        <h1>Rahul Kumar</h1>
+        <h2>Security Researcher <span>·</span> Penetration Tester</h2>
+        <p class="hero-text">
+          I build, test, and document practical security projects across web applications, APIs, networks, and defensive security — with a focus on turning hands-on work into meaningful, real-world evidence.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Explore Projects <span>↗</span></a>
+          <a class="btn btn-ghost" href="https://github.com/RAHUL-Nj" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn btn-ghost" href="https://linkedin.com/in/rahul-kumar-ceh" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+        <div class="hero-meta">
+          <span>VAPT</span><span>Web & API Security</span><span>Network Security</span><span>Bug Bounty</span>
+        </div>
+      </div>
+
+      <div class="terminal-card" aria-label="Terminal style profile panel">
+        <div class="terminal-top"><span></span><span></span><span></span><b>rahul-Nj@security:~ Radhakrishn ~</b></div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> whoami</p>
+          <p class="output">ethical Hacker / security_researcher</p>
+          <p><span class="prompt">$</span> focus --current</p>
+          <p class="output">web_applications / APIs / networks</p>
+          <p><span class="prompt">$</span> objective</p>
+          <p class="output">find → validate → document → learn</p>
+          <p><span class="prompt">$</span> status</p>
+          <p class="output success">● actively building</p>
+          <span class="cursor">_</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="section-heading">
+        <div><span class="section-kicker">01 / CONTEXT</span><h2>About</h2></div>
+        <p>The person behind the findings.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-main">
+          <p class="lead">
+            My cybersecurity work is driven by hands-on testing rather than only theory.
+            I enjoy taking an application or security problem apart, understanding how
+            the pieces interact, validating what is actually possible, and documenting
+            the result clearly.
+          </p>
+           <p>
+  I have reported security vulnerabilities to <strong>200+ companies and organizations</strong>,
+  including NASA, HDFC, NPCI, Axis, OpenAI, Zerodha, Indeed, ExpressVPN, Upwork, Maruti Suzuki,
+  Ixigo, and many more.
+</p>
+
+<p>
+  I mainly work in <strong>Web Application Security, API Security, Vulnerability Research,
+  Penetration Testing, OSINT, and Digital Forensics</strong>.
+</p>
+
+<div class="achievement-strip">
+  <span>🏆 NASA Hall of Fame</span>
+  <span>🏆 Com Olho Top 10</span>
+  <span>🔝 TryHackMe Top 3%</span>
+  <span>🎓 CEH | DCJSP</span>
+</div>
+
+<p>
+  I’m passionate about identifying real-world security issues, responsibly disclosing
+  vulnerabilities, and continuously improving my cybersecurity skills.
+</p>"""
+          <p>
+            My practical interests span web and API security, vulnerability assessment,
+            network monitoring, threat detection and incident response. Bug bounty
+            research gives me a way to apply those skills against real-world applications
+            while practicing responsible disclosure and security-team communication.
+          </p>
+          <p>
+            Alongside security research, I build small technical projects and continue
+            learning through hands-on labs, CTF-style work and security-focused training.
+            This site is intentionally evidence-oriented: it is a place to show the
+            work behind the profile.
+          </p>
+        </div>
+        <div class="fact-panel">
+          <div class="fact"><span>Primary interests</span><strong>Web · API · Network Security</strong></div>
+          <div class="fact"><span>Research style</span><strong>Manual testing + PoC + documentation</strong></div>
+          <div class="fact"><span>Current approach</span><strong>Build, break, validate, explain</strong></div>
+          <div class="fact"><span>Location</span><strong>India</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <div class="section-heading">
+        <div><span class="section-kicker">02 / BUILD LOG</span><h2>Projects</h2></div>
+        <p>Selected work, with the reasoning and skills behind it.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured" data-project="sniffer">
+          <div class="project-top"><span class="project-number">01</span><span class="tag">NETWORK SECURITY</span></div>
+          <div class="project-icon">⌁</div>
+          <h3>Advanced Network Packet Sniffer</h3>
+          <p>Python + Scapy tool for capturing, filtering, monitoring and analysing network traffic on a selected interface.</p>
+          <div class="tech-row"><span>Python</span><span>Scapy</span><span>Network Analysis</span></div>
+          <button class="text-btn">View project details <span>→</span></button>
+        </article>
+
+        <article class="project-card" data-project="blockchain">
+          <div class="project-top"><span class="project-number">02</span><span class="tag">CRYPTOGRAPHY</span></div>
+          <div class="project-icon">#</div>
+          <h3>Blockchain Cryptography Project</h3>
+          <p>A browser-based simplified blockchain simulation demonstrating transactions, mining, hashing and digital signatures.</p>
+          <div class="tech-row"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <button class="text-btn">View project details <span>→</span></button>
+        </article>
+
+        <article class="project-card" data-project="phishing">
+          <div class="project-top"><span class="project-number">03</span><span class="tag">THREAT DETECTION</span></div>
+          <div class="project-icon">!</div>
+          <h3>Phishing Detection Tool</h3>
+          <p>Web-based tool designed to analyse email and SMS content for indicators associated with phishing.</p>
+          <div class="tech-row"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <button class="text-btn">View project details <span>→</span></button>
+        </article>
+      </div>
+
+      <div class="evidence-note">
+        <span>Evidence policy</span>
+        <p>Repository, screenshots, write-ups and demos are shown as placeholders where the supplied profile did not include a verified URL. Replace only with your real evidence links.</p>
+      </div>
+    </section>
+
+    <section id="competitions" class="section container">
+      <div class="section-heading">
+        <div><span class="section-kicker">03 / CHALLENGE LOG</span><h2>Competitions & CTFs</h2></div>
+        <p>Hands-on security under challenge conditions.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-item">
+          <div class="timeline-marker">ISAC</div>
+          <div>
+            <div class="item-head"><h3>Indian Army Cyber Security Hackathon (ISAC)</h3><span>10 / 2022</span></div>
+            <p><strong>Result:</strong> Successfully completed the initial rounds.</p>
+            <p>The documented focus was on scanning and network-security fundamentals. The experience provided practical exposure to solving security-oriented tasks under a competition format.</p>
+            <div class="mini-tags"><span>Scanning</span><span>Network Security</span><span>Security Fundamentals</span></div>
+            <button class="evidence-placeholder" type="button" data-placeholder="Competition evidence URL was not provided in the supplied profile.">Evidence placeholder ↗</button>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">CTF</div>
+          <div>
+            <div class="item-head"><h3>TryHackMe Practical Challenge Work</h3><span>2023 → Present</span></div>
+            <p><strong>Scope:</strong> 300+ machines, CTFs and walkthroughs; Advent of Cyber 2022 and 2023 completed.</p>
+            <p>Used challenge-based practice to reinforce security concepts through repeated hands-on problem solving.</p>
+            <div class="mini-tags"><span>CTF</span><span>Hands-on Security</span><span>Walkthroughs</span></div>
+            <a class="evidence-placeholder" href="https://tryhackme.com/" target="_blank" rel="noopener">Profile / platform ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="learning" class="section container">
+      <div class="section-heading">
+        <div><span class="section-kicker">04 / PRACTICE</span><h2>Practical Learning</h2></div>
+        <p>Hands-on work kept separate from formal certifications.</p>
+      </div>
+      <div class="learning-grid">
+        <div class="metric-card"><strong>300+</strong><span>Machines, CTFs & walkthroughs</span></div>
+        <div class="metric-card"><strong>Top 10</strong><span>TryHackMe achievement listed in profile</span></div>
+        <div class="metric-card"><strong>22-23-24-2025</strong><span>Advent of Cyber completed</span></div>
+      </div>
+      <div class="learning-detail">
+        <div>
+          <h3>TryHackMe</h3>
+          <p>Long-term practical learning through machines, CTFs and walkthroughs. This is presented as hands-on practice, not as a certification.</p>
+          <a class="btn btn-ghost small" href="https://tryhackme.com/" target="_blank" rel="noopener">Open platform ↗</a>
+        </div>
+        <div class="skill-cloud">
+          <span>Web Security</span><span>Networking</span><span>Enumeration</span><span>Security Fundamentals</span><span>CTF Problem Solving</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section container">
+      <div class="section-heading">
+        <div><span class="section-kicker">05 / FORMAL LEARNING</span><h2>Certifications</h2></div>
+        <p>Supporting credentials — not the main story.</p>
+      </div>
+      <div class="cert-grid">
+        <article class="cert-card"><span>01</span><h3>Defronix Certified Junior Security Practitioner (DCJSP)</h3><p>Completed to strengthen foundational practical cybersecurity knowledge.</p><button class="evidence-placeholder" data-placeholder="Certificate URL was not provided. Add your verified certificate link.">Certificate link placeholder ↗</button></article>
+        <article class="cert-card"><span>02</span><h3>Foundations of Cybersecurity — Google</h3><p>Foundational security learning supporting a broader cybersecurity skill set.</p><button class="evidence-placeholder" data-placeholder="Certificate URL was not provided. Add your verified certificate link.">Certificate link placeholder ↗</button></article>
+        <article class="cert-card"><span>03</span><h3>Ethical Hacking Essentials (EHE) — EC-Council</h3><p>Formal learning focused on ethical hacking concepts and security fundamentals.</p><button class="evidence-placeholder" data-placeholder="Certificate URL was not provided. Add your verified certificate link.">Certificate link placeholder ↗</button></article>
+        <article class="cert-card"><span>04</span><h3>Metaxone Certified Ethical Hacker (MCEH)</h3><p>Security-focused credential supporting practical ethical-hacking knowledge.</p><button class="evidence-placeholder" data-placeholder="Certificate URL was not provided. Add your verified certificate link.">Certificate link placeholder ↗</button></article>
+        <article class="cert-card"><span>05</span><h3>Ficklem Licensed Penetration Tester (FLPT)</h3><p>Credential aligned with penetration-testing fundamentals.</p><button class="evidence-placeholder" data-placeholder="Certificate URL was not provided. Add your verified certificate link.">Certificate link placeholder ↗</button></article>
+        <article class="cert-card"><span>06</span><h3>Introduction to Cybersecurity — Cisco</h3><p>Foundational cybersecurity training supporting broader security understanding.</p><button class="evidence-placeholder" data-placeholder="Certificate URL was not provided. Add your verified certificate link.">Certificate link placeholder ↗</button></article>
+      </div>
+    </section>
+
+    <section id="achievements" class="section container">
+      <div class="section-heading">
+        <div><span class="section-kicker">06 / SIGNAL</span><h2>Achievements & Community</h2></div>
+        <p>Evidence of consistency and participation.</p>
+      </div>
+      <div class="achievement-grid">
+        <article class="achievement">
+          <span class="achievement-icon">★</span>
+          <div><h3>Bug Bounty Hall of Fame</h3><p>Recognised for responsibly reported security vulnerabilities across public and private programs. The supplied profile lists Hall of Fame recognition from August 2026 onward.</p></div>
+        </article>
+        <article class="achievement">
+          <span class="achievement-icon">↯</span>
+          <div><h3>Com Olho Security Research</h3><p>The supplied profile records active security research, vulnerability validation, PoC development, responsible disclosure and communication with security teams.</p><a href="https://cyber.comolho.com/researcher/profile/RAHUL-Nj" target="_blank" rel="noopener">Researcher profile ↗</a></div>
+        </article>
+        <article class="achievement">
+          <span class="achievement-icon">◈</span>
+          <div><h3>Bugcrowd Research</h3><p>Profile evidence includes web-application findings and additional Android testing across categories including broken authentication/session management, sensitive data exposure, XSS, server-side injection and broken access control.</p><a href="https://bugcrowd.com/h/RAHUL-Nj" target="_blank" rel="noopener">Bugcrowd profile ↗</a></div>
+        </article>
+        <article class="achievement">
+          <span class="achievement-icon">10</span>
+          <div><h3>TryHackMe Top 10</h3><p>Profile lists a Top 10 achievement alongside 300+ completed machines, CTFs and walkthroughs.</p><a href="https://tryhackme.com/" target="_blank" rel="noopener">Learning platform ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container stack-section">
+      <div class="section-heading">
+        <div><span class="section-kicker">07 / TOOLBOX</span><h2>Security Toolbox</h2></div>
+        <p>Technologies and domains used across the work.</p>
+      </div>
+      <div class="toolbox">
+        <div><span>Web & API</span><p>VAPT · OWASP Top 10 · API Testing · Manual & Automated Testing</p></div>
+        <div><span>Security Tools</span><p>Burp Suite · Nmap · Metasploit · Wireshark · Nessus/OpenVAS · Nikto · WPScan · Kali Linux</p></div>
+        <div><span>Defensive Security</span><p>Network Security · Threat Detection · Threat Intelligence · Intrusion Detection · Incident Response</p></div>
+        <div><span>Programming</span><p>Python · Bash · HTML · CSS · JavaScript</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-inner">
+        <div>
+          <span class="section-kicker">08 / CONNECT</span>
+          <h2>Let's talk security.</h2>
+          <p>For security research, technical discussions, opportunities or collaboration.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:nitinjha132@gmail.com">Email ↗</a>
+          <a href="https://github.com/RAHUL-Nj" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://linkedin.com/in/rahul-kumar-ceh" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>© <span id="year"></span> Rahul Kumar</span>
+    <span>Built as a project hub · Static · GitHub Pages ready</span>
+  </footer>
+
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close-modal aria-label="Close project details">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
