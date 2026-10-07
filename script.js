@@ -1,45 +1,153 @@
 // Auto Update Footer Year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// 1. CYBERSECURITY MATRIX CANVAS ANIMATION
+// 1. REALISTIC ROAMING SPIDER LOGIC
+const bug = document.getElementById('cyber-bug');
+if (bug) {
+  let bugX = window.innerWidth / 2;
+  let bugY = window.innerHeight / 3;
+  let targetX = bugX;
+  let targetY = bugY;
+  let currentAngle = 0;
+  let speed = 2.5;
+  let isMoving = false;
+
+  function updateBugPosition() {
+    let dx = targetX - bugX;
+    let dy = targetY - bugY;
+    let dist = Math.sqrt(dx * dx + dy * dy);
+
+    if (dist > 5) {
+      isMoving = true;
+      bug.classList.add('walking');
+
+      // Calculate Rotation Angle
+      let targetAngle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+      
+      // Smooth Rotation
+      let angleDiff = targetAngle - currentAngle;
+      while (angleDiff < -180) angleDiff += 360;
+      while (angleDiff > 180) angleDiff -= 360;
+      currentAngle += angleDiff * 0.15;
+
+      // Move toward target
+      bugX += (dx / dist) * speed;
+      bugY += (dy / dist) * speed;
+
+      bug.style.transform = `translate3d(${bugX}px, ${bugY}px, 0) rotate(${currentAngle}deg)`;
+    } else {
+      if (isMoving) {
+        isMoving = false;
+        bug.classList.remove('walking');
+        // Pause at destination, then choose new target
+        setTimeout(setRandomTarget, Math.random() * 2000 + 1000);
+      }
+    }
+    requestAnimationFrame(updateBugPosition);
+  }
+
+  function setRandomTarget() {
+    let padding = 80;
+    targetX = padding + Math.random() * (window.innerWidth - padding * 2);
+    targetY = padding + Math.random() * (window.innerHeight - padding * 2);
+    speed = Math.random() * 1.5 + 1.8;
+  }
+
+  // Click on screen to attract the spider
+  window.addEventListener('click', (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+    speed = 4.0; // Fast sprint when user clicks
+  });
+
+  setRandomTarget();
+  updateBugPosition();
+}
+
+// 2. HIGH-PERFORMANCE CYBER NETWORK MESH BACKGROUND ANIMATION
 const canvas = document.getElementById('cyber-bg');
 if (canvas) {
   const ctx = canvas.getContext('2d');
+  let width, height;
 
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
   }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
+  resize();
+  window.addEventListener('resize', resize);
 
-  const chars = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ<>/$#%&*';
-  const fontSize = 14;
-  let columns = Math.floor(canvas.width / fontSize);
-  let drops = Array(columns).fill(1);
+  const particles = [];
+  const particleCount = Math.floor(Math.min(window.innerWidth / 15, 80));
 
-  function drawMatrix() {
-    ctx.fillStyle = 'rgba(9, 13, 22, 0.1)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.8,
+      vy: (Math.random() - 0.5) * 0.8,
+      radius: Math.random() * 2 + 1
+    });
+  }
 
-    ctx.fillStyle = '#00ff66';
-    ctx.font = `${fontSize}px monospace`;
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
 
-    for (let i = 0; i < drops.length; i++) {
-      const text = chars.charAt(Math.floor(Math.random() * chars.length));
-      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
-      }
-      drops[i]++;
+    // Draw Subtle Cyber Network Grid
+    ctx.strokeStyle = 'rgba(0, 255, 102, 0.03)';
+    ctx.lineWidth = 1;
+    const gridSize = 40;
+    for (let x = 0; x < width; x += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, height);
+      ctx.stroke();
     }
-  }
+    for (let y = 0; y < height; y += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(width, y);
+      ctx.stroke();
+    }
 
-  setInterval(drawMatrix, 45);
+    // Connect Nearby Nodes
+    for (let i = 0; i < particles.length; i++) {
+      let p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0 || p.x > width) p.vx *= -1;
+      if (p.y < 0 || p.y > height) p.vy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = '#00ff66';
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = '#00ff66';
+      ctx.fill();
+
+      for (let j = i + 1; j < particles.length; j++) {
+        let p2 = particles[j];
+        let dx = p.x - p2.x;
+        let dy = p.y - p2.y;
+        let dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 130) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.strokeStyle = `rgba(0, 255, 102, ${1 - dist / 130})`;
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
 }
 
-// 2. MOBILE NAVIGATION MENU TOGGLE
+// 3. MOBILE NAVIGATION MENU TOGGLE
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -58,7 +166,7 @@ if (menuToggle && navLinks) {
   });
 }
 
-// 3. SMOOTH SCROLL FOR NAVBAR LINKS
+// 4. SMOOTH SCROLL FOR NAVBAR LINKS
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -72,7 +180,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// 4. PROJECT MODALS DATA & EVENT HANDLERS
+// 5. PROJECT MODALS DATA & EVENT HANDLERS
 const projectData = {
   sniffer: {
     title: "Advanced Network Packet Sniffer",
