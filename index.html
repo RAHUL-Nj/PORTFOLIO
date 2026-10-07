@@ -8,8 +8,107 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Animated Cyber Matrix Canvas Background -->
-  <canvas id="cyber-bg"></canvas>
+  <!-- Animated Cyber Network Background Canvas -->
+  <div id="cyber-bg-wrap">
+    <canvas id="cyber-bg"></canvas>
+  </div>
+
+  <!-- Realistic 3D Tarantula Spider Overlay (Bada Size) -->
+  <div id="cyber-bug-container">
+    <div id="cyber-bug">
+      <svg viewBox="0 0 120 120">
+        <defs>
+          <!-- 3D Gradients & Filters for Realistic Depth -->
+          <radialGradient id="abdomenGrad" cx="40%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#dfa83d"/>
+            <stop offset="60%" stop-color="#a4721a"/>
+            <stop offset="100%" stop-color="#543702"/>
+          </radialGradient>
+
+          <linearGradient id="legBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#718ebf"/>
+            <stop offset="50%" stop-color="#3d5175"/>
+            <stop offset="100%" stop-color="#1f2c42"/>
+          </linearGradient>
+
+          <linearGradient id="stripeYellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#edd272"/>
+            <stop offset="100%" stop-color="#b08323"/>
+          </linearGradient>
+
+          <radialGradient id="headGrad" cx="40%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#e8bd4b"/>
+            <stop offset="100%" stop-color="#805911"/>
+          </radialGradient>
+
+          <filter id="dropShadow" x="-20%" y="-20%" width="150%" height="150%">
+            <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.8"/>
+          </filter>
+        </defs>
+
+        <g filter="url(#dropShadow)">
+          <!-- Back Legs (Left Side) -->
+          <g class="leg leg-l3">
+            <path d="M 52 70 Q 25 88 12 100" stroke="url(#legBlueGrad)" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M 38 79 Q 28 86 20 93" stroke="url(#stripeYellowGrad)" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+          </g>
+          <g class="leg leg-l2">
+            <path d="M 50 60 Q 15 65 5 72" stroke="url(#legBlueGrad)" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M 32 62 Q 22 64 12 68" stroke="url(#stripeYellowGrad)" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+          </g>
+          <g class="leg leg-l1">
+            <path d="M 50 48 Q 18 35 8 20" stroke="url(#legBlueGrad)" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M 34 41 Q 25 33 16 26" stroke="url(#stripeYellowGrad)" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+          </g>
+
+          <!-- Back Legs (Right Side) -->
+          <g class="leg leg-r3">
+            <path d="M 68 70 Q 95 88 108 100" stroke="url(#legBlueGrad)" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M 82 79 Q 92 86 100 93" stroke="url(#stripeYellowGrad)" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+          </g>
+          <g class="leg leg-r2">
+            <path d="M 70 60 Q 105 65 115 72" stroke="url(#legBlueGrad)" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M 88 62 Q 98 64 108 68" stroke="url(#stripeYellowGrad)" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+          </g>
+          <g class="leg leg-r1">
+            <path d="M 70 48 Q 102 35 112 20" stroke="url(#legBlueGrad)" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M 86 41 Q 95 33 104 26" stroke="url(#stripeYellowGrad)" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+          </g>
+
+          <!-- Pedipalps (Front Small Arms) -->
+          <path class="leg leg-l1" d="M 52 35 Q 40 20 38 10" stroke="url(#legBlueGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path class="leg leg-r1" d="M 68 35 Q 80 20 82 10" stroke="url(#legBlueGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+          <!-- Abdomen (Yellow Fuzzy Back) -->
+          <ellipse cx="60" cy="78" rx="20" ry="24" fill="url(#abdomenGrad)"/>
+          <ellipse cx="60" cy="74" rx="14" ry="18" fill="none" stroke="#ffe596" stroke-width="1.5" stroke-dasharray="2,3" opacity="0.6"/>
+
+          <!-- Cephalothorax (Blue Central Thorax) -->
+          <circle cx="60" cy="52" r="16" fill="url(#legBlueGrad)"/>
+
+          <!-- Head (Yellow Furry Head Part) -->
+          <path d="M 45 42 Q 60 28 75 42 Q 60 48 45 42 Z" fill="url(#headGrad)"/>
+
+          <!-- Chelicerae (Fangs) -->
+          <ellipse cx="54" cy="28" rx="4" ry="7" fill="#2d1d4d"/>
+          <ellipse cx="66" cy="28" rx="4" ry="7" fill="#2d1d4d"/>
+
+          <!-- 3D Shiny Eyes (Jumping Spider Style) -->
+          <circle cx="53" cy="33" r="4.5" fill="#111111"/>
+          <circle cx="51.5" cy="31.5" r="1.5" fill="#ffffff"/>
+
+          <circle cx="67" cy="33" r="4.5" fill="#111111"/>
+          <circle cx="65.5" cy="31.5" r="1.5" fill="#ffffff"/>
+
+          <circle cx="45" cy="36" r="2.5" fill="#111111"/>
+          <circle cx="44" cy="35" r="0.8" fill="#ffffff"/>
+
+          <circle cx="75" cy="36" r="2.5" fill="#111111"/>
+          <circle cx="74" cy="35" r="0.8" fill="#ffffff"/>
+        </g>
+      </svg>
+    </div>
+  </div>
 
   <header class="nav-wrap">
     <nav class="nav container">
@@ -314,12 +413,11 @@
           <div class="project-top"><span class="project-number">01</span><span class="tag">NETHUNTER FEATURES</span></div>
           <h3>Key Features & Capabilities</h3>
           <ul style="font-size: 13px; color: var(--muted); margin-top: 15px; padding-left: 18px; line-height: 1.8;">
-           <h3> <li><strong>Optimized GUI Touch Interface:</strong> Single-click Evil AP & BadUSB setup.</li>
+            <li><strong>Optimized GUI Touch Interface:</strong> Single-click Evil AP & BadUSB setup.</li>
             <li><strong>HID USB Attacks:</strong> Automated keystroke injection payloads.</li>
             <li><strong>Custom Kernel:</strong> Wireless frame injection support.</li>
-            </h3>
           </ul>
-          <img src="https://media.licdn.com/dms/image/v2/D4D22AQFPO6Yk8X-FDQ/feedshare-shrink_480/feedshare-shrink_480/0/1691352943285?e=1792627200&v=beta&t=un6ZYwLHcLyhZU1hwxXgef0GasiGgYu8j6p-UyJoosc" alt="Kali NetHunter Terminal" style="width: 100%; display: block;">
+          <img src="https://media.licdn.com/dms/image/v2/D4D22AQFPO6Yk8X-FDQ/feedshare-shrink_480/feedshare-shrink_480/0/1691352943285?e=1792627200&v=beta&t=un6ZYwLHcLyhZU1hwxXgef0GasiGgYu8j6p-UyJoosc" alt="Kali NetHunter Terminal" style="width: 100%; display: block; margin-top: 15px; border-radius: 6px;">
         </article>
 
         <article class="project-card">
