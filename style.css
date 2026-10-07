@@ -23,8 +23,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Matrix Canvas Background */
-#cyber-bg {
+/* Cyber Animated Background Canvas Wrapping */
+#cyber-bg-wrap {
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +32,63 @@ body {
   height: 100vh;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.15;
+  overflow: hidden;
+}
+
+#cyber-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Realistic 3D Tarantula Spider Overlay Styling (Bada Size) */
+#cyber-bug-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  pointer-events: none;
+}
+
+#cyber-bug {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 85px;  /* Bada size set kiya gaya hai */
+  height: 85px; /* Bada size set kiya gaya hai */
+  margin-top: -42.5px;
+  margin-left: -42.5px;
+  transition: transform 0.15s linear;
+}
+
+#cyber-bug svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Realistic Leg Movement Animation */
+#cyber-bug.walking .leg-l1,
+#cyber-bug.walking .leg-r2,
+#cyber-bug.walking .leg-l3 {
+  animation: tarantulaStep1 0.16s infinite alternate ease-in-out;
+}
+
+#cyber-bug.walking .leg-r1,
+#cyber-bug.walking .leg-l2,
+#cyber-bug.walking .leg-r3 {
+  animation: tarantulaStep2 0.16s infinite alternate ease-in-out;
+}
+
+@keyframes tarantulaStep1 {
+  0% { transform: rotate(-10deg); transform-origin: center; }
+  100% { transform: rotate(14deg); transform-origin: center; }
+}
+
+@keyframes tarantulaStep2 {
+  0% { transform: rotate(14deg); transform-origin: center; }
+  100% { transform: rotate(-10deg); transform-origin: center; }
 }
 
 .container {
